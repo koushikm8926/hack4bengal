@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,  SafeAreaView,TextInput, Pressable, KeyboardAvoidingView } from 'react-native'
+import { StyleSheet, Text, View,TextInput, Pressable,  } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
@@ -6,7 +6,8 @@ const RegisterScreen = () => {
      
 const navigation= useNavigation();
   return (
-    <KeyboardAvoidingView>
+    <View>
+      
       <View style={{backgroundColor:"#1abc9b", height:180, borderBottomLeftRadius:180, borderBottomRightRadius:180}} ></View>
           <View style={{marginTop:30}}>
             <Text style={{color:"#1abc9b",  textAlign:"center", fontSize:20, fontWeight:500}} >Register</Text>
@@ -34,7 +35,7 @@ const navigation= useNavigation();
 
           </View>
 
-        </KeyboardAvoidingView>
+        </View>
             
   
   )
