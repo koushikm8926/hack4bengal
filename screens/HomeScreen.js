@@ -25,7 +25,7 @@ const HomeScreen = () => {
                 
             </Pressable>
 
-            <Pressable style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#feddda", borderRadius:20, margin:10 }} >
+            <Pressable onPress={()=>navigation.navigate("blood")} style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#feddda", borderRadius:20, margin:10 }} >
                 
                     <MaterialCommunityIcons name="blood-bag" size={44} color="#f1938c" />
                     <Text style={{color:"#f1938c", fontSize:17, marginTop:20}} >Blood</Text>
