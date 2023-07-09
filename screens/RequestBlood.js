@@ -9,9 +9,9 @@ const RequestBlood = () => {
      <View style={{alignItems:'center', justifyContent:'center', margin:30,}}>
       <TextInput placeholder="Patient's Name" style={{ width:350, borderRadius:7, height:50, borderColor:"black", borderWidth:1, padding:5, margin:8}} />
       <TextInput placeholder="Patient's Age" style={{ width:350, borderRadius:7, height:50, borderColor:"black", borderWidth:1, padding:5, margin:8}} />
-      <TextInput placeholder="Address" style={{ width:350, borderRadius:7, height:50, borderColor:"black", borderWidth:1, padding:5, margin:8}} />
-      <TextInput placeholder="Postal code" style={{ width:350, borderRadius:7, height:50, borderColor:"black", borderWidth:1, padding:5, margin:8}} />
       <TextInput placeholder="Blood Group" style={{ width:350, borderRadius:7, height:50, borderColor:"black", borderWidth:1, padding:5, margin:8}} />
+      <TextInput placeholder="Address" style={{ width:350, borderRadius:7, height:70, borderColor:"black", borderWidth:1, padding:5, margin:8}} />
+      <TextInput placeholder="Postal code" style={{ width:350, borderRadius:7, height:50, borderColor:"black", borderWidth:1, padding:5, margin:8}} />
      </View>
     
     </SafeAreaView>
@@ -20,4 +20,8 @@ const RequestBlood = () => {
 
 export default RequestBlood
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  TextInput1:{
+    
+  }
+})
