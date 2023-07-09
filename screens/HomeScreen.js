@@ -18,7 +18,7 @@ const HomeScreen = () => {
         </View>
 
         <View style={{ flexDirection:"row", margin:14 }} >
-            <Pressable style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#009688", borderRadius:20, margin:10 }} >
+            <Pressable onPress={()=>navigation.navigate("Doctor")} style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#009688", borderRadius:20, margin:10 }} >
                 
                     <Fontisto name="doctor" size={44} color="white" />
                     <Text style={{color:"white", fontSize:17, marginTop:20}} >Doctor</Text>

@@ -9,6 +9,7 @@ import ChatScreen from '../screens/ChatScreen';
 import BloodOptions from '../screens/BloodOptions';
 import DonateBlood from '../screens/DonateBlood';
 import RequestBlood from '../screens/RequestBlood';
+import DoctorScreen from '../screens/DoctorScreen';
 
 
 const ScreenNavigator = () => {
@@ -25,6 +26,7 @@ const ScreenNavigator = () => {
         <Stack.Screen name='donate' component={DonateBlood} options={{ headerShown: false }}  />
         <Stack.Screen name='request' component={RequestBlood} options={{ headerShown: false }}  />
         <Stack.Screen name='blood' component={BloodOptions} options={{ headerShown: false }}  />
+        <Stack.Screen name='Doctor' component={DoctorScreen} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   )
