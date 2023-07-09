@@ -3,9 +3,13 @@ import React from 'react'
 import { Fontisto } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/core';
 
 const HomeScreen = () => {
+    const navigation = useNavigation();
   return (
+    <>
+   
     <View>
 
         <View style={{marginTop:50, marginLeft:20, }}>
@@ -30,12 +34,17 @@ const HomeScreen = () => {
 
             <Pressable style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#d8e2f8", borderRadius:20, margin:10 }} >
                 
-                    <FontAwesome5 name="ambulance" size={44} color="#a2bef0" />
-                    <Text style={{color:"#a2bef0", fontSize:17, marginTop:20}} >Ambulance</Text>
+                    <FontAwesome5 name="ambulance" size={44} color="#4d7cd9" />
+                    <Text style={{color:"#4d7cd9", fontSize:17, marginTop:20}} >Ambulance</Text>
                 
             </Pressable>
         </View>
+
+        <Pressable onPress={ () => navigation.navigate("Chat") } style={{height:60, width:80, backgroundColor:"#d8e2f8", marginTop:400, marginLeft:280,  padding:9, alignItems:"center", borderBottomStartRadius:70, borderTopRightRadius:70, borderTopLeftRadius:70 }} >
+        <FontAwesome5 name="robot" size={34} color="#4d7cd9" />
+        </Pressable>
     </View>
+    </>
   )
 }
 
