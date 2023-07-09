@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../config';
+
 const LoginScreen = () => {
     const navigation= useNavigation();
     const [loading,setLoading]= useState(false);

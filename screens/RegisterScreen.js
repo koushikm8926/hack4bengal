@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View,  SafeAreaView,TextInput, Pressable, KeyboardAvoidingView } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View,  SafeAreaView,TextInput, Pressable, KeyboardAvoidingView, Alert } from 'react-native'
+import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { addDoc, collection, doc, setDoc } from "firebase/firestore"; 
 import { db } from '../config';
