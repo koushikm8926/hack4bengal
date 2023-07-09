@@ -1,10 +1,34 @@
 import { Pressable, StyleSheet, Text, TextInput, View, KeyboardAvoidingView } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../config';
 const LoginScreen = () => {
     const navigation= useNavigation();
-
+    const [loading,setLoading]= useState(false);
+    const [mail, setMail] = useState("");
+    const [password, setPassword] = useState("");
+  
+    useEffect(()=>{
+      setLoading(true);
+      const unsubscribe =auth.onAuthStateChanged((authUser)=>{
+        if(!authUser){
+          setLoading(false);
+        }
+        if(authUser){
+          navigation.replace("Home")
+        }
+      });
+      return unsubscribe;
+    },[])
+  
+    const login = ()=> {
+      signInWithEmailAndPassword(auth,mail,password).then((userCredentials)=> {
+        console.log("user credential",userCredentials);
+        const user = userCredentials.user;
+        console.log("user details", user);
+      })
+    }
   return (
     <KeyboardAvoidingView>
     <View style={{backgroundColor:"#1abc9b", height:180, borderBottomLeftRadius:180, borderBottomRightRadius:180}} ></View>
@@ -18,7 +42,7 @@ const LoginScreen = () => {
           </View>
 
           <View style={{marginTop:30, justifyContent:'center', alignItems:'center'}}>
-                  <Pressable onPress={() => navigation.navigate("Home")} style={{backgroundColor:'#1abc9b', width:350,height:50,borderRadius:12,alignContent:'center', justifyContent:'center'}}>
+                  <Pressable onPress={login} style={{backgroundColor:'#1abc9b', width:350,height:50,borderRadius:12,alignContent:'center', justifyContent:'center'}}>
                       <Text style={{fontSize:16,fontWeight:'bold', color:'white', alignItems:'center', textAlign:'center'}}>Login</Text>
                   </Pressable>
           </View>
