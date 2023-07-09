@@ -2,6 +2,9 @@ import { StyleSheet, Text, View,  SafeAreaView,TextInput, Pressable, KeyboardAvo
 import React from 'react'
 
 const RegisterScreen = () => {
+     
+
+
   return (
     <KeyboardAvoidingView>
       <View style={{backgroundColor:"#1abc9b", height:180, borderBottomLeftRadius:180, borderBottomRightRadius:180}} ></View>
