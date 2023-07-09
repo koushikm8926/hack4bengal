@@ -1,7 +1,9 @@
 import { Pressable, StyleSheet, Text, TextInput, View, KeyboardAvoidingView } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
+    const navigation= useNavigation();
 
   return (
     <KeyboardAvoidingView>
@@ -16,14 +18,14 @@ const LoginScreen = () => {
           </View>
 
           <View style={{marginTop:30, justifyContent:'center', alignItems:'center'}}>
-                  <Pressable style={{backgroundColor:'#1abc9b', width:350,height:50,borderRadius:12,alignContent:'center', justifyContent:'center'}}>
+                  <Pressable onPress={() => navigation.navigate("Home")} style={{backgroundColor:'#1abc9b', width:350,height:50,borderRadius:12,alignContent:'center', justifyContent:'center'}}>
                       <Text style={{fontSize:16,fontWeight:'bold', color:'white', alignItems:'center', textAlign:'center'}}>Login</Text>
                   </Pressable>
           </View>
 
           <View style={{flexDirection:'row',  justifyContent:"center", alignItems:"center", marginTop:20, }}>
             <Text style={{fontSize:16}} >Already have an account</Text>
-              <Pressable style={{marginLeft:10, }}>
+              <Pressable style={{marginLeft:10, }} onPress={() => navigation.navigate("Register")}>
                 <Text style={{color:"#1abc9b", fontSize:16}} >Register</Text>
               </Pressable>
           </View>

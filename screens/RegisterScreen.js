@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View,  SafeAreaView,TextInput, Pressable, KeyboardAvoidingView } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 const RegisterScreen = () => {
      
-
-
+const navigation= useNavigation();
   return (
     <KeyboardAvoidingView>
       <View style={{backgroundColor:"#1abc9b", height:180, borderBottomLeftRadius:180, borderBottomRightRadius:180}} ></View>
@@ -27,7 +27,7 @@ const RegisterScreen = () => {
 
             <View style={{flexDirection:'row',  justifyContent:"center", alignItems:"center", marginTop:20, }}>
               <Text style={{fontSize:16}} >Already have an account</Text>
-                <Pressable style={{marginLeft:10, }}>
+                <Pressable style={{marginLeft:10, }} onPress={() => navigation.navigate("Login")}>
                   <Text style={{color:"#1abc9b", fontSize:16}} >Login</Text>
                 </Pressable>
             </View>

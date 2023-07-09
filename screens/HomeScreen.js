@@ -3,7 +3,7 @@ import React from 'react'
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View style={{marginTop:50,}}>
       <Text>HomeScreen</Text>
     </View>
   )
