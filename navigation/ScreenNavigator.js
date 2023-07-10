@@ -27,8 +27,8 @@ const ScreenNavigator = () => {
   return (
      <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='Landing' component={LandingScreen} options={{headerShown:false}} />
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}} />
+        <Stack.Screen name='Landing' component={LandingScreen} options={{headerShown:false}} />
         <Stack.Screen name="Login" component={LoginScreen} options={{headerShown:false}} />
         <Stack.Screen name="Register" component={RegisterScreen} options={{headerShown:false}} />
         <Stack.Screen name="Chat" component={ChatScreen} options={{ headerShown: false }} />
@@ -41,6 +41,7 @@ const ScreenNavigator = () => {
         <Stack.Screen name='Dental' component={DentalScreen} options={{headerShown: false}} />
         <Stack.Screen name='Medicine' component={MedicineScreen} options={{headerShown:false}} />
         <Stack.Screen name='emergency' component={Emergency} options={{headerShown:false}} />
+        <Stack.Screen name='Doctor' component={DoctorScreen} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
