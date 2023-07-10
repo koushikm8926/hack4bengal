@@ -4,6 +4,7 @@ import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 import * as Animatable from 'react-native-animatable';
+import { StatusBar } from 'expo-status-bar';
 const DoctorScreen = () => {
   const data = [
     {
@@ -109,10 +110,11 @@ const DoctorScreen = () => {
     ]
   return (
     <SafeAreaView style={{marginTop:Platform.OS === "android" ? 50:0,}} >
-      <Text style={{fontSize:20, textAlign:'center',fontWeight:'bold', color:"#5180da"}}>Search your Doctor</Text>
+      <StatusBar/>
+      <Text style={{fontSize:20, textAlign:'center',fontWeight:'bold', color:"#e2414c", }}>Search your Doctor</Text>
      
      <View style={{ justifyContent:'center', alignItems:'center', marginTop:20,}}>
-      <TextInput placeholder='Search your preferable doctor' placeholderTextColor="grey" style={{height:50, borderRadius:7, width:380,  borderWidth:1, borderColor:'black', backgroundColor:'white'}}/>
+      <TextInput placeholder='Search your preferable doctor' placeholderTextColor="grey" style={{height:50, borderRadius:7, width:380,  borderWidth:1, borderColor:'#e2414c', backgroundColor:'white', padding:5}}/>
      </View>
 
 
@@ -138,19 +140,19 @@ const DoctorScreen = () => {
                 <View style={{flexDirection:'row',justifyContent:'space-between',  }}>
 
 
-            <View style={{flexDirection:'row',backgroundColor:'#00b4d8',borderRadius:7,width:180,justifyContent:'center', alignItems:'center'}}>      
+            <View style={{flexDirection:'row',backgroundColor:'white',borderRadius:7,width:180,justifyContent:'center', alignItems:'center', borderColor:"#e2414c", borderWidth:1}}>      
                   <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
                      <TouchableOpacity>
-                        <Feather name="phone-call" size={24} color="white" />
+                        <Feather name="phone-call" size={24} color="#e2414c" />
                     </TouchableOpacity>  
                   </Animatable.View>
-                    <Text style={{fontSize:18,color:'white', marginLeft:10,}}>Call Now</Text>
+                    <Text style={{fontSize:18,color:'#e2414c', marginLeft:10,}}>Call Now</Text>
             </View>
 
 
 
-                  <View style={{flexDirection:'row',backgroundColor:'#00b4d8',borderRadius:7,width:180,height:40,justifyContent:'center', alignItems:'center'}}>
-                    <FontAwesome5 name="book-medical" size={24} color="black" />
+                  <View style={{flexDirection:'row',backgroundColor:'#e2414c',borderRadius:7,width:180,height:40,justifyContent:'center', alignItems:'center'}}>
+                    <FontAwesome5 name="book-medical" size={24} color="white" />
                     <Text style={{fontSize:18,color:'white', marginLeft:10,}} >Book Appoinment</Text>
                   </View>
                 </View>

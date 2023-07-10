@@ -18,7 +18,7 @@ const LandingScreen = () => {
       </Pressable>
       
       <Pressable onPress={() => navigation.navigate("Register")} style={{height:50, width:350, marginTop:10, marginLeft:20, borderRadius:10, borderColor:"white", borderWidth:1, }} >
-        <Text style={{textAlign:"center",fontSize:20, fontWeight:"bold", color:"#e2414c", padding:10, color:"white"}} >Create Account</Text>
+        <Text style={{textAlign:"center",fontSize:20, fontWeight:"bold", color:"#e2414c", padding:10, color:"white"}} >Create New Account</Text>
       </Pressable>
       
     </View>
