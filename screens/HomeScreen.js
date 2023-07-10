@@ -4,7 +4,7 @@ import { Fontisto } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
-
+import { Ionicons } from '@expo/vector-icons';
 const HomeScreen = () => {
     const navigation = useNavigation();
   return (
@@ -68,6 +68,26 @@ const HomeScreen = () => {
                 </Pressable>
                 
             </View>
+
+<View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-around'}}>
+      <Pressable style={{ marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#d0d0d0', padding:10, borderRadius:20, justifyContent:'center',  width:120}}>
+        <Text style={{marginRight:6}}>Filter</Text>
+        <Ionicons name="filter" size={20} color="black" />
+      </Pressable>
+
+      <Pressable style={{ marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#d0d0d0', padding:10, borderRadius:20, justifyContent:'center', width:120}}>
+        <Text>Sort By Name</Text>
+
+      </Pressable>
+
+      <Pressable style={{ marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#d0d0d0', padding:10, borderRadius:20, justifyContent:'center', width:120}}>
+        <Text>Sort By Fees</Text>
+      </Pressable>
+</View>
+
+
+
+
         </View>
     </View>
         <Pressable onPress={ () => navigation.navigate("Chat") } style={{height:60, width:80, backgroundColor:"#d8e2f8", marginTop:180, marginLeft:280,  padding:9, alignItems:"center", borderBottomStartRadius:70, borderTopRightRadius:70, borderTopLeftRadius:70 }} >
