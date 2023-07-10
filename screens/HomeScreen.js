@@ -128,6 +128,9 @@ const HomeScreen = () => {
 
         </View>
 
+
+<Text style={{padding:10,fontSize:20,fontWeight:'bold'}}>Wellknown Doctors</Text>
+
 <View style={{marginTop:10,}}>
 {data.map((item, index)=>(
     <View key={index} style={{marginLeft:10,flexDirection:'row',margin:10,}} >
@@ -137,7 +140,7 @@ const HomeScreen = () => {
             <View style={{flexDirection:'row'}}> 
                  <Text style={{fontSize:19,fontWeight:'500'}}>{item.name}</Text>
                  <Text style={{fontSize:19, fontWeight:'300', marginLeft:20,}}>{item.rating}</Text>
-                 <AntDesign name="star" size={24} color="orange" style={{marginLeft:5,}} />
+                 <AntDesign name="star" size={17} color="orange" style={{marginLeft:5,}} />
             </View>
             <Text style={{fontSize:15,}}>{item.designation}</Text>
             <Text style={{fontSize:15,}}>Experience {item.experience} </Text>

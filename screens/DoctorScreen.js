@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, SafeAreaView, Platform, Image, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Platform, Image, ScrollView, TextInput } from 'react-native'
 import React from 'react'
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 const DoctorScreen = () => {
   const data = [
     {
@@ -107,32 +109,45 @@ const DoctorScreen = () => {
     ]
   return (
     <SafeAreaView style={{marginTop:Platform.OS === "android" ? 50:0,}} >
-      <Text style={{fontSize:20, textAlign:'center',fontWeight:'bold', color:"#5180da"}}>Select your Doctor</Text>
-      <ScrollView>
+      <Text style={{fontSize:20, textAlign:'center',fontWeight:'bold', color:"#5180da"}}>Search your Doctor</Text>
+     
+     <View style={{ justifyContent:'center', alignItems:'center', marginTop:20,}}>
+      <TextInput placeholder='Search your preferable doctor' placeholderTextColor="grey" style={{height:50, borderRadius:7, width:380,  borderWidth:1, borderColor:'black', backgroundColor:'white'}}/>
+     </View>
+
+
+      <ScrollView style={{marginTop:10,}}>
         {data.map((item,index)=>(
 
           <ScrollView key={index} style={{padding:10, bottom:15,  }}>
-              <View style={{backgroundColor:'#C5C6D0',padding:10,borderRadius:7,flexDirection:'row', marginTop:10}}>
+              <View style={{padding:10,borderRadius:7,flexDirection:'row', marginTop:10,backgroundColor:'white', }}>
                   <View style={{marginLeft:7,}}>
-                       <Image source={{uri:item.image}} style={{height:60, width:60,borderRadius:30,  }}/>
+                       <Image source={{uri:item.image}} style={{height:100, width:80,borderRadius:30,  }}/>
                   </View>
                 <View style={{marginLeft:12,}}>
                        <Text style={{fontSize:18, fontSize:20,fontWeight:'bold'}}>{item.name}</Text>
-                       <Text>{item.designation}</Text>
+                       <Text style={{fontSize:19,}}>{item.designation}</Text>
                        <View style={{flexDirection:'row'}}>
-                          <Text>{item.experience}</Text>
-                          <Text style={{color:'green'}}>    Fees {item.fees}</Text>
+                          <Text style={{fontSize:19,}}>{item.experience}</Text>
+                          <Text style={{color:'green', fontSize:19,}}>    Fees {item.fees}</Text>
                        </View>
                 </View>
               </View>
 
-              <View style={{marginTop:10,}}>
+              <View style={{marginTop:5,}}>
                 <View style={{flexDirection:'row',justifyContent:'space-between',  }}>
 
-                  <View style={{flexDirection:'row',backgroundColor:'#00b4d8',borderRadius:7,width:180,justifyContent:'center', alignItems:'center'}}>
-                    <Feather name="phone-call" size={24} color="black" />
+
+            <View style={{flexDirection:'row',backgroundColor:'#00b4d8',borderRadius:7,width:180,justifyContent:'center', alignItems:'center'}}>      
+                  <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
+                     <TouchableOpacity>
+                        <Feather name="phone-call" size={24} color="white" />
+                    </TouchableOpacity>  
+                  </Animatable.View>
                     <Text style={{fontSize:18,color:'white', marginLeft:10,}}>Call Now</Text>
-                  </View>
+            </View>
+
+
 
                   <View style={{flexDirection:'row',backgroundColor:'#00b4d8',borderRadius:7,width:180,height:40,justifyContent:'center', alignItems:'center'}}>
                     <FontAwesome5 name="book-medical" size={24} color="black" />
