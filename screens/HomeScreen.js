@@ -6,6 +6,42 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
 import { Ionicons } from '@expo/vector-icons';
 const HomeScreen = () => {
+
+    const data = [
+       
+        {
+        id:"1",
+        name:"Dr. Gagandeep",
+        image:"https://th.bing.com/th/id/OIP.0F2VgQsf-1S410g0ZYQB-gHaKX?pid=ImgDet&w=1000&h=1400&rs=1",
+        rating:"4.5",
+        designation:"Gynaecogolist",
+        experience:"4 years",
+        fees:"400$",
+        },
+        
+        {
+        id:"2",
+        name:"Dr. Koushik Mondal",
+        image:"https://ysm-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto:best,w_975/v1/yms/prod/004102ee-ee49-4f3f-a17f-0f3a6ec25a7b",
+        rating:"4.2",
+        designation:"Dentist",
+        experience:"5 years",
+        fees:"200$"
+        },
+        
+        {
+        id:"3",
+        name:"Dr. Mohit Singh",
+        image:"https://th.bing.com/th/id/OIP.KnnEOurT2Qq-6NNDlPbD5wHaLF?pid=ImgDet&rs=1",
+        rating:"3.9",
+        designation:"Cardiologists",
+        experience:"6 years",
+        fees:"170$",
+        },
+        
+          
+        ]
+
     const navigation = useNavigation();
   return (
     <>
@@ -89,6 +125,18 @@ const HomeScreen = () => {
 
 
         </View>
+
+<View>
+{data.map((item, index)=>(
+    <View>
+        <Text>{item.name}</Text>
+    </View>
+))}
+</View>
+
+
+
+        
     </View>
         <Pressable onPress={ () => navigation.navigate("Chat") } style={{height:60, width:80, backgroundColor:"#d8e2f8", marginTop:180, marginLeft:280,  padding:9, alignItems:"center", borderBottomStartRadius:70, borderTopRightRadius:70, borderTopLeftRadius:70 }} >
             <FontAwesome5 name="robot" size={34} color="#4d7cd9" />

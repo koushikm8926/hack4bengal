@@ -4,8 +4,9 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import * as Animatable from 'react-native-animatable';
 import { nexmoApiKey,nexmoApiSecret } from "../nexmo config";
 import * as Location from 'expo-location';
+import { FontAwesome } from '@expo/vector-icons';
 import React, { useState, useEffect } from 'react';
-
+import { FontAwesome5 } from '@expo/vector-icons';
 export default function Emergency({navigation}){ 
     const [displayCurrentAddress, setdisplayCurrentAddress] = useState(
         "We are loading your location"
@@ -153,7 +154,9 @@ export default function Emergency({navigation}){
                 <TouchableOpacity
                  onPress={handleSendLocation} 
                 style={{height:200, width:200, borderRadius:100,backgroundColor:'#fa4b4a', justifyContent:'center',alignItems:'center',}}> 
-                <Ionicons name="call" size={100} color="white"  style={{marginRight:10,padding:5, color:'white', }}></Ionicons> 
+                {/* <Ionicons name="call" size={100} color="white"  ></Ionicons>  */}
+                <FontAwesome name="location-arrow" size={100} color="black"  style={{marginRight:10,padding:5, color:'white', }}  />
+                {/* <FontAwesome5 name="localocation-arrow" size={100} color="white"/> */}
                 </TouchableOpacity> 
             </Animatable.View>  
         </View>
