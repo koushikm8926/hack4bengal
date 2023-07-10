@@ -32,7 +32,7 @@ const HomeScreen = () => {
                 
             </Pressable>
 
-            <Pressable style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#d8e2f8", borderRadius:20, margin:10 }} >
+            <Pressable onPress={()=> navigation.navigate("emergency")} style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#d8e2f8", borderRadius:20, margin:10 }} >
                 
                     <FontAwesome5 name="ambulance" size={44} color="#4d7cd9" />
                     <Text style={{color:"#4d7cd9", fontSize:17, marginTop:20}} >Ambulance</Text>
