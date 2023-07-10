@@ -82,27 +82,27 @@ const HomeScreen = () => {
             <Text style={{fontSize:23, }} >Common Health Problem</Text>
             <View style={{flexDirection:"row", flexWrap:"wrap", marginTop:15 }} >
                 <Pressable onPress={()=>navigation.navigate("ortho")} style={{height:40, width:120, backgroundColor:"#ece7f6",  padding:6, borderRadius:10, margin:5}} >
-                    <Text style={{fontSize:17, textAlign:"center", color:"#8c88a9"}} >Orthopaedics</Text>
+                    <Text style={{fontSize:17, textAlign:"center", color:"black", }} >Orthopaedics</Text>
                 </Pressable>
 
                 <Pressable onPress={()=>navigation.navigate("Cardio")} style={{height:40, width:120, backgroundColor:"#faf0f1",  padding:6, borderRadius:10, margin:5}} >
-                    <Text style={{fontSize:17, textAlign:"center", color:"#a6a1b7"}} >Cardiology</Text>
+                    <Text style={{fontSize:17, textAlign:"center", color:"black"}} >Cardiology</Text>
                 </Pressable>
 
                 <Pressable onPress={()=>navigation.navigate("Gastro")} style={{height:40, width:150, backgroundColor:"#e6f4f2",  padding:6, borderRadius:10, margin:5}} >
-                    <Text style={{fontSize:17, textAlign:"center", color:"#929bae"}} >Gastroenterology</Text>
+                    <Text style={{fontSize:17, textAlign:"center", color:"black"}} >Gastroenterology</Text>
                 </Pressable>
 
                 <Pressable onPress={()=>navigation.navigate("Dental")} style={{height:40, width:100, backgroundColor:"#e7e7f5",  padding:6, borderRadius:10, margin:5}} >
-                    <Text style={{fontSize:17, textAlign:"center", color:"#9a9ab9"}} >Dental</Text>
+                    <Text style={{fontSize:17, textAlign:"center", color:"black"}} >Dental</Text>
                 </Pressable>
 
                 <Pressable onPress={()=>navigation.navigate("Medicine")} style={{height:40, width:100, backgroundColor:"#e7e7f5",  padding:6, borderRadius:10, margin:5}} >
-                    <Text style={{fontSize:17, textAlign:"center", color:"#9a9ab9"}} >Medicine</Text>
+                    <Text style={{fontSize:17, textAlign:"center", color:"black"}} >Medicine</Text>
                 </Pressable>
 
                 <Pressable style={{height:40, width:120, backgroundColor:"#faf0f1",  padding:6, borderRadius:10, margin:5}} >
-                    <Text style={{fontSize:17, textAlign:"center", color:"#a6a1b7"}} >Dermatology</Text>
+                    <Text style={{fontSize:17, textAlign:"center", color:"black"}} >Dermatology</Text>
                 </Pressable>
                 
             </View>

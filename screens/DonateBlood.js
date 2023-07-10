@@ -1,50 +1,39 @@
-import { Platform, StyleSheet, Text,View} from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View ,FlatList,} from 'react-native'
+import React, { useEffect, useState } from 'react'
+// import firestore from '@react-native-firebase/firestore';
+// import {firebase} from "../config";
+// import { Firestore, QuerySnapshot, doc, query } from 'firebase/firestore'
+// import { db } from '../config';
+// import {firestore} from "../config";
+
+
 
 const DonateBlood = () => {
-  const data = [
-    {
-    name:"Koushik Mondal",
-    age:"20",
-    pin:"741402",
-    group:"O+",
-    address:"Phulia, Nadia, West-Bengal",
-    },
-    
-    {
-    name:"Gagandeep Singh",
-    age:"21",
-    pin:"802220",
-    group:"O+",
-    address:"Samahuta, Rohats, Bihar",
-    },
-    
-    {
-    name:"Prince Maurya",
-    age:"19",
-    pin:"802219",
-    group:"B+",
-    address:"Rajpur, Rohats, Bihar",
-    },
-    
-    {
-    name:"Badal Kumar",
-    age:"22",
-    pin:"800410",
-    group:"O-",
-    address:"Myko, Bhojpur, Bihar",
-    },
-    
-    {
-    name:"Avinash Kumar",
-    age:"17",
-    pin:"144411",
-    group:"A+",
-    address:"Phagwara, Kapurthala, Punjab ",
-    },
-    ]
+    const [name,setName]=useState([]);
+    const BloodRequest = firebase.firestore().collection('BloodRequest');
+    useEffect(async()=>{
+        BloodRequest
+        .onSnapshot(
+            querySnapshot =>{
+                const users =[]
+                querySnapshot.forEach((doc)=>{
+                    const {address,age,fname,group,pin}= doc.data()
+                    users.push({
+                        id:doc.id,
+                        address,
+                        age,
+                        fname,
+                        group,
+                        pin,
+
+                    })
+                })
+                setUsers(users)
+            }
+        )
+    },[])
   return (
-    <View style={{marginTop:Platform.OS=== "android" ? 50 : 0 ,}}>
+    <View style={{}}>
       <Text>DonateBlood</Text>
     </View>
   )
