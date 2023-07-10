@@ -59,7 +59,7 @@ const HomeScreen = () => {
                     <Text style={{fontSize:17, textAlign:"center", color:"#9a9ab9"}} >Dental</Text>
                 </Pressable>
 
-                <Pressable style={{height:40, width:100, backgroundColor:"#e7e7f5",  padding:6, borderRadius:10, margin:5}} >
+                <Pressable onPress={()=>navigation.navigate("Medicine")} style={{height:40, width:100, backgroundColor:"#e7e7f5",  padding:6, borderRadius:10, margin:5}} >
                     <Text style={{fontSize:17, textAlign:"center", color:"#9a9ab9"}} >Medicine</Text>
                 </Pressable>
 
