@@ -79,11 +79,9 @@ const HomeScreen = () => {
                 
             </Pressable>
 
-            <Pressable onPress={()=> navigation.navigate("emergency")} style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#d8e2f8", borderRadius:20, margin:10 }} >
-                
+            <Pressable onPress={()=> navigation.navigate("emergency")} style={{height:140, width:100, alignItems:"center", justifyContent:"center", backgroundColor:"#d8e2f8", borderRadius:20, margin:10 }} >              
                     <FontAwesome5 name="ambulance" size={44} color="#4d7cd9" />
-                    <Text style={{color:"#4d7cd9", fontSize:17, marginTop:20}} >Ambulance</Text>
-                
+                    <Text style={{color:"#4d7cd9", fontSize:17, marginTop:20}} >Ambulance</Text>        
             </Pressable>
         </View>
 
@@ -138,8 +136,6 @@ const HomeScreen = () => {
 <Text style={{padding:10,fontSize:20, color:'#e2414c', fontWeight:'bold', marginLeft:10,}}>Wellknown Doctors</Text>
 <View style={{borderColor:'#e2414c',borderWidth:1,width:350,marginLeft:20,}}/>
 
-
-
 <View style={{marginTop:10,}}>
 {data.map((item, index)=>(
     <View key={index} style={{marginLeft:10,height:120,flexDirection:'row',margin:10,borderBottomColor:'#e2414c', borderBottomWidth:4,borderRadius:7,borderRightColor:"#e2414c", borderRightWidth:2,borderLeftColor:'#e2414c', borderLeftWidth:2,borderRadius:10,}} >
@@ -157,20 +153,16 @@ const HomeScreen = () => {
             </View>
             <Text style={{fontSize:16,}}>{item.designation}</Text>
             <Text style={{fontSize:16,}}>Experience {item.experience} </Text>
-            <Text>Fees {item.fees}</Text>
+            <Text style={{fontSize:16, fontWeight:'bold'}}>Fees {item.fees}</Text>
         </View>
 
     </View>
 ))}
 </View>
 
+</ScrollView>    
+</>
 
-
-        
-        </ScrollView>
-
-    
-    </>
   )
 }
 

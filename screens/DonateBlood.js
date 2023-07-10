@@ -1,8 +1,12 @@
-import { StyleSheet, Text, View ,FlatList, Platform, TextInput, ScrollView, Pressable,} from 'react-native'
+import { StyleSheet, Text, View ,FlatList, Platform, TextInput, ScrollView, Pressable,Alert} from 'react-native'
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 const DonateBlood = () => {
+
+  const navigation=useNavigation();
+
   const data = [
     {
     name:"Koushik Mondal",
@@ -50,6 +54,18 @@ const DonateBlood = () => {
     },
     
     ]
+
+    const donate = () => {
+      Alert.alert('Blood Donation', 'If you wanted to donate please click ok', [
+        {
+          text: 'Cancel',
+          onPress: () => navigation.navigate("donate"),
+          style: 'cancel',
+        },
+        {text: 'OK', onPress: () => navigation.navigate("Home")},
+      ]);
+    }
+
   return (
     <ScrollView style={{marginTop:Platform.OS === "android" ? 20:0,}}>
           <View>
@@ -71,7 +87,7 @@ const DonateBlood = () => {
       </View>
       
       <View style={{height:30,width:100,borderColor:'white', borderWidth:1,backgroundColor:'white', borderRadius:10,alignItems:'center',position:'absolute', right:20,}}>
-        <Pressable style={{justifyContent:'center', alignItems:'center',}}>
+        <Pressable onPress={donate} style={{justifyContent:'center', alignItems:'center',}}>
           <Text style={{color:'#e2414c', fontWeight:'bold'}}>DONATE NOW</Text>
         </Pressable>
       </View>
@@ -80,11 +96,6 @@ const DonateBlood = () => {
     </ScrollView>
 ))}
 </ScrollView>
-
-
-
-
-
 
           </View>    
      </ScrollView>
