@@ -90,9 +90,24 @@ const HomeScreen = () => {
 
         </View>
     </View>
-        <Pressable onPress={ () => navigation.navigate("Chat") } style={{height:60, width:80, backgroundColor:"#d8e2f8", marginTop:180, marginLeft:280,  padding:9, alignItems:"center", borderBottomStartRadius:70, borderTopRightRadius:70, borderTopLeftRadius:70 }} >
+        <Pressable onPress={ () => navigation.navigate("Chat") } style={styles.Pressable1} >
             <FontAwesome5 name="robot" size={34} color="#4d7cd9" />
         </Pressable>
+
+        {/* <Pressable onPress={ () => navigation.navigate("Chat") } style={{
+            height:60, 
+            width:80, 
+            backgroundColor:"#d8e2f8", 
+            marginTop:180, 
+            marginLeft:280,  
+            padding:9, 
+            alignItems:"center", 
+            borderBottomStartRadius:70, 
+            borderTopRightRadius:70, 
+            borderTopLeftRadius:70 
+        }} >
+            <FontAwesome5 name="robot" size={34} color="#4d7cd9" />
+        </Pressable> */}
     </>
   )
 }
@@ -107,5 +122,19 @@ const styles = StyleSheet.create({
         justifyContent:"center", 
         backgroundColor:"#1abc9b", 
         borderRadius:20, 
-        margin:10 }
+        margin:10 
+    },
+
+        Pressable1:{
+            height:60, 
+            width:80, 
+            backgroundColor:"#d8e2f8", 
+            marginTop:180, 
+            marginLeft:280,  
+            padding:9, 
+            alignItems:"center", 
+            borderBottomStartRadius:70, 
+            borderTopRightRadius:70, 
+            borderTopLeftRadius:70 
+        }
 })

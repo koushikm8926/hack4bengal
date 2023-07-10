@@ -1,8 +1,12 @@
-import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Pressable } from 'react-native'
 import React from 'react'
+import { FontAwesome5 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/core';
 
 const MedicineScreen = () => {
+    const navigation = useNavigation();
   return (
+    <>
     <ScrollView style={{marginTop:40, marginLeft:20}}>
       <Text style={{fontSize:24, fontWeight:500}} >What Are Medicines?</Text>
       <Text style={{fontSize:17, padding:7}} >Medicines are chemicals or compounds used to cure, halt, or prevent disease; ease symptoms; or help in the diagnosis of illnesses. Advances in medicines have enabled doctors to cure many diseases and save lives.
@@ -14,7 +18,23 @@ const MedicineScreen = () => {
        <Text style={{fontSize:17, padding:1, }}>{'\u2B24'}  creams, gels, or ointments that are rubbed onto the skin </Text>
        <Text style={{fontSize:17, padding:1, }}>{'\u2B24'}  inhalers (like nasal sprays or asthma inhalers) </Text>
        <Text style={{fontSize:17, padding:1, }}>{'\u2B24'}  injections (shots) or intravenous (inserted into a vein) medicines </Text>
-    </ScrollView>
+    
+    <Pressable onPress={ () => navigation.navigate("Chat") } style={{
+            height:60, 
+            width:80, 
+            backgroundColor:"#d8e2f8",
+            marginTop:20, 
+            marginLeft:250,  
+            padding:9, 
+            alignItems:"center", 
+            borderBottomStartRadius:70, 
+            borderTopRightRadius:70, 
+            borderTopLeftRadius:70 
+        }} >
+            <FontAwesome5 name="robot" size={34} color="#4d7cd9" />
+        </Pressable>
+        </ScrollView>
+    </>
   )
 }
 
