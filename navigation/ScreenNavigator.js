@@ -16,6 +16,7 @@ import Emergency from '../screens/EmergencyScreen';
 import MedicineScreen from '../problems/MedicineScreen';
 import GastroScreen from '../problems/GastroScreen';
 import DentalScreen from '../problems/DentalScreen';
+import LandingScreen from '../screens/LandingScreen';
 
 
 
@@ -26,6 +27,7 @@ const ScreenNavigator = () => {
   return (
      <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name='Landing' component={LandingScreen} options={{headerShown:false}} />
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}} />
         <Stack.Screen name="Login" component={LoginScreen} options={{headerShown:false}} />
         <Stack.Screen name="Register" component={RegisterScreen} options={{headerShown:false}} />
