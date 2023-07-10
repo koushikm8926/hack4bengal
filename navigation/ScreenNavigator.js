@@ -13,6 +13,9 @@ import DoctorScreen from '../screens/DoctorScreen';
 import OrthoScreen from '../problems/OrthoScreen';
 import CardioScreen from '../problems/CardioScreen';
 import Emergency from '../screens/EmergencyScreen';
+import MedicineScreen from '../problems/MedicineScreen';
+import GastroScreen from '../problems/GastroScreen';
+import DentalScreen from '../problems/DentalScreen';
 
 
 
@@ -33,6 +36,9 @@ const ScreenNavigator = () => {
         <Stack.Screen name='Doctor' component={DoctorScreen} options={{headerShown:false}} />
         <Stack.Screen name='ortho' component={OrthoScreen} options={{headerShown:false}} />
         <Stack.Screen name='Cardio' component={CardioScreen} options={{headerShown:false}} />
+        <Stack.Screen name='Gastro' component={GastroScreen} options={{headerShown:false}}/>
+        <Stack.Screen name='Dental' component={DentalScreen} options={{headerShown: false}} />
+        <Stack.Screen name='Medicine' component={MedicineScreen} options={{headerShown:false}} />
         <Stack.Screen name='emergency' component={Emergency} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
