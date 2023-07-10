@@ -122,8 +122,8 @@ const DoctorScreen = () => {
         {data.map((item,index)=>(
 
           <ScrollView key={index} style={{padding:10, bottom:15,  }}>
-              <View style={{padding:10,borderRadius:7,flexDirection:'row', marginTop:10,backgroundColor:'white', }}>
-                  <View style={{marginLeft:7,}}>
+              <View style={{padding:10,borderRadius:7,flexDirection:'row', marginTop:10,backgroundColor:'white', borderBottomColor:"#e2414c", borderBottomWidth:4, borderLeftColor:"#e2414c", borderLeftWidth:2.5, borderRightColor:"#e2414c", borderRightWidth:2.5, borderTopColor:"#e2414c", borderTopWidth:1 }}>
+                  <View style={{marginLeft:7, }}>
                        <Image source={{uri:item.image}} style={{height:100, width:80,borderRadius:30,  }}/>
                   </View>
                 <View style={{marginLeft:12,}}>
@@ -131,7 +131,7 @@ const DoctorScreen = () => {
                        <Text style={{fontSize:19,}}>{item.designation}</Text>
                        <View style={{flexDirection:'row'}}>
                           <Text style={{fontSize:19,}}>{item.experience}</Text>
-                          <Text style={{color:'green', fontSize:19,}}>    Fees {item.fees}</Text>
+                          <Text style={{color:'#e2414c', fontSize:19,}}>    Fees {item.fees}</Text>
                        </View>
                 </View>
               </View>
@@ -140,7 +140,7 @@ const DoctorScreen = () => {
                 <View style={{flexDirection:'row',justifyContent:'space-between',  }}>
 
 
-            <View style={{flexDirection:'row',backgroundColor:'white',borderRadius:7,width:180,justifyContent:'center', alignItems:'center', borderColor:"#e2414c", borderWidth:1}}>      
+            <View style={{flexDirection:'row',backgroundColor:'white',borderRadius:7,width:180,justifyContent:'center', alignItems:'center', borderColor:"#e2414c", borderWidth:1, height:50}}>      
                   <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
                      <TouchableOpacity>
                         <Feather name="phone-call" size={24} color="#e2414c" />
@@ -151,7 +151,7 @@ const DoctorScreen = () => {
 
 
 
-                  <View style={{flexDirection:'row',backgroundColor:'#e2414c',borderRadius:7,width:180,height:40,justifyContent:'center', alignItems:'center'}}>
+                  <View style={{flexDirection:'row',backgroundColor:'#e2414c',borderRadius:7,width:180,height:50,justifyContent:'center', alignItems:'center', padding:3}}>
                     <FontAwesome5 name="book-medical" size={24} color="white" />
                     <Text style={{fontSize:18,color:'white', marginLeft:10,}} >Book Appoinment</Text>
                   </View>
