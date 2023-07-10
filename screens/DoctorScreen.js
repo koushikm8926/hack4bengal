@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Platform, Image, ScrollView, TextInput } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Platform, Image, ScrollView, TextInput, Pressable, Alert } from 'react-native'
 import React from 'react'
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -7,7 +7,6 @@ import * as Animatable from 'react-native-animatable';
 import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 const DoctorScreen = () => {
-  const navigation = useNavigation();
   const data = [
     {
     id:"0",
@@ -110,6 +109,21 @@ const DoctorScreen = () => {
     },
       
     ]
+    const appoinment = () => {
+      Alert.alert('Doctors Appoinment', 'Congrats , you will be getting a notification shortly from us. Thank you', [
+        {text: 'OK', onPress: () => navigation.navigate("Home")},
+      ]);
+    }
+
+    const call= () => {
+      Alert.alert('Oops Sorry !', 'This features is not available right now ! ', [
+        {text: 'OK', onPress: () => navigation.navigate("Home")},
+      ]);
+    }
+
+
+
+
   return (
     <SafeAreaView style={{marginTop:Platform.OS === "android" ? 50:0,}} >
       <StatusBar/>
@@ -144,7 +158,7 @@ const DoctorScreen = () => {
 
             <View style={{flexDirection:'row',backgroundColor:'white',borderRadius:7,width:180,justifyContent:'center', alignItems:'center', borderColor:"#e2414c", borderWidth:1, height:50}}>      
                   <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
-                     <TouchableOpacity onPress={()=> navigation.navigate("Chat")}>
+                     <TouchableOpacity>
                         <Feather name="phone-call" size={24} color="#e2414c" />
                     </TouchableOpacity>  
                   </Animatable.View>
@@ -154,8 +168,10 @@ const DoctorScreen = () => {
 
 
                   <View style={{flexDirection:'row',backgroundColor:'#e2414c',borderRadius:7,width:180,height:50,justifyContent:'center', alignItems:'center', padding:3}}>
-                    <FontAwesome5 name="book-medical" size={24} color="white" />
+                  <Pressable onPress={appoinment}>
+                   <FontAwesome5 name="book-medical" size={24} color="white" />
                     <Text style={{fontSize:18,color:'white', marginLeft:10,}} >Book Appoinment</Text>
+                  </Pressable>
                   </View>
                 </View>
               </View>
