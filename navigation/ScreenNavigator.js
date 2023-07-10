@@ -27,6 +27,7 @@ const ScreenNavigator = () => {
   return (
      <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name='blood' component={BloodOptions} options={{ headerShown: false }}  />
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}} />
         <Stack.Screen name='Landing' component={LandingScreen} options={{headerShown:false}} />
         <Stack.Screen name="Login" component={LoginScreen} options={{headerShown:false}} />
@@ -34,7 +35,6 @@ const ScreenNavigator = () => {
         <Stack.Screen name="Chat" component={ChatScreen} options={{ headerShown: false }} />
         <Stack.Screen name='donate' component={DonateBlood} options={{ headerShown: false }}  />
         <Stack.Screen name='request' component={RequestBlood} options={{ headerShown: false }}  />
-        <Stack.Screen name='blood' component={BloodOptions} options={{ headerShown: false }}  />
         <Stack.Screen name='ortho' component={OrthoScreen} options={{headerShown:false}} />
         <Stack.Screen name='Cardio' component={CardioScreen} options={{headerShown:false}} />
         <Stack.Screen name='Gastro' component={GastroScreen} options={{headerShown:false}}/>
