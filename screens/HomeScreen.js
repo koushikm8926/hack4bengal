@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native'
+import { StyleSheet, Text, View, Pressable, Image } from 'react-native'
 import React from 'react'
 import { Fontisto } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
 import { Ionicons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { ScrollView } from 'react-native';
 const HomeScreen = () => {
 
     const data = [
@@ -46,7 +48,7 @@ const HomeScreen = () => {
   return (
     <>
    
-    <View>
+    <ScrollView>
 
         <View style={{marginTop:50, marginLeft:20, }}>
         <Text style={{fontSize:25, fontWeight:500 }} >Find your</Text>
@@ -126,10 +128,22 @@ const HomeScreen = () => {
 
         </View>
 
-<View>
+<View style={{marginTop:10,}}>
 {data.map((item, index)=>(
-    <View>
-        <Text>{item.name}</Text>
+    <View key={index} style={{marginLeft:10,flexDirection:'row',margin:10,}} >
+        <Image style={{height:80, width:80,borderRadius:7,}} source={{uri:item.image}} />
+        
+        <View style={{marginLeft:10,flexDirection:'column'}}>
+            <View style={{flexDirection:'row'}}> 
+                 <Text style={{fontSize:19,fontWeight:'500'}}>{item.name}</Text>
+                 <Text style={{fontSize:19, fontWeight:'300', marginLeft:20,}}>{item.rating}</Text>
+                 <AntDesign name="star" size={24} color="orange" style={{marginLeft:5,}} />
+            </View>
+            <Text style={{fontSize:15,}}>{item.designation}</Text>
+            <Text style={{fontSize:15,}}>Experience {item.experience} </Text>
+            <Text>Fees {item.fees}</Text>
+        </View>
+
     </View>
 ))}
 </View>
@@ -137,25 +151,9 @@ const HomeScreen = () => {
 
 
         
-    </View>
-        <Pressable onPress={ () => navigation.navigate("Chat") } style={styles.Pressable1} >
-            <FontAwesome5 name="robot" size={34} color="#4d7cd9" />
-        </Pressable>
+        </ScrollView>
 
-        {/* <Pressable onPress={ () => navigation.navigate("Chat") } style={{
-            height:60, 
-            width:80, 
-            backgroundColor:"#d8e2f8", 
-            marginTop:180, 
-            marginLeft:280,  
-            padding:9, 
-            alignItems:"center", 
-            borderBottomStartRadius:70, 
-            borderTopRightRadius:70, 
-            borderTopLeftRadius:70 
-        }} >
-            <FontAwesome5 name="robot" size={34} color="#4d7cd9" />
-        </Pressable> */}
+    
     </>
   )
 }
