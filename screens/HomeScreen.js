@@ -59,7 +59,7 @@ const HomeScreen = () => {
    
     <ScrollView>
 
-        <View style={{marginTop:20, marginLeft:20, }}>
+        <View style={{marginTop:30, marginLeft:20, }}>
         <Text style={{fontSize:25, fontWeight:500, color:'#e2414c' }} >Find your</Text>
         <Text style={{fontSize:25, fontWeight:500 , color:'#e2414c'}} >Health Solutions!</Text>
         </View>

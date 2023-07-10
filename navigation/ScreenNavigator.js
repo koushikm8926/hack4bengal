@@ -41,6 +41,7 @@ const ScreenNavigator = () => {
         <Stack.Screen name='Medicine' component={MedicineScreen} options={{headerShown:false}} />
         <Stack.Screen name='emergency' component={Emergency} options={{headerShown:false}} />
         <Stack.Screen name='Doctor' component={DoctorScreen} options={{headerShown:false}}/>
+        <Stack.Screen name='blood' component={BloodOptions} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
