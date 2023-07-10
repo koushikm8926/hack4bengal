@@ -12,6 +12,7 @@ import RequestBlood from '../screens/RequestBlood';
 import DoctorScreen from '../screens/DoctorScreen';
 import OrthoScreen from '../problems/OrthoScreen';
 import CardioScreen from '../problems/CardioScreen';
+import Emergency from '../screens/EmergencyScreen';
 
 
 
@@ -32,6 +33,7 @@ const ScreenNavigator = () => {
         <Stack.Screen name='Doctor' component={DoctorScreen} options={{headerShown:false}} />
         <Stack.Screen name='ortho' component={OrthoScreen} options={{headerShown:false}} />
         <Stack.Screen name='Cardio' component={CardioScreen} options={{headerShown:false}} />
+        <Stack.Screen name='emergency' component={Emergency} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   )
