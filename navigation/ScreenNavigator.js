@@ -26,7 +26,7 @@ const ScreenNavigator = () => {
 
   return (
      <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name='Landing' component={LandingScreen} options={{headerShown:false}} />
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}} />
         <Stack.Screen name="Login" component={LoginScreen} options={{headerShown:false}} />
