@@ -5,7 +5,9 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from '@react-navigation/native';
 const DoctorScreen = () => {
+  const navigation = useNavigation();
   const data = [
     {
     id:"0",
@@ -142,7 +144,7 @@ const DoctorScreen = () => {
 
             <View style={{flexDirection:'row',backgroundColor:'white',borderRadius:7,width:180,justifyContent:'center', alignItems:'center', borderColor:"#e2414c", borderWidth:1, height:50}}>      
                   <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
-                     <TouchableOpacity>
+                     <TouchableOpacity onPress={()=> navigation.navigate("Chat")}>
                         <Feather name="phone-call" size={24} color="#e2414c" />
                     </TouchableOpacity>  
                   </Animatable.View>
