@@ -43,11 +43,11 @@ const HomeScreen = () => {
         <View style={{marginLeft:20}} >
             <Text style={{fontSize:23, }} >Common Health Problem</Text>
             <View style={{flexDirection:"row", flexWrap:"wrap", marginTop:15 }} >
-                <Pressable style={{height:40, width:120, backgroundColor:"#ece7f6",  padding:6, borderRadius:10, margin:5}} >
+                <Pressable onPress={()=>navigation.navigate("ortho")} style={{height:40, width:120, backgroundColor:"#ece7f6",  padding:6, borderRadius:10, margin:5}} >
                     <Text style={{fontSize:17, textAlign:"center", color:"#8c88a9"}} >Orthopaedics</Text>
                 </Pressable>
 
-                <Pressable style={{height:40, width:120, backgroundColor:"#faf0f1",  padding:6, borderRadius:10, margin:5}} >
+                <Pressable onPress={()=>navigation.navigate("Cardio")} style={{height:40, width:120, backgroundColor:"#faf0f1",  padding:6, borderRadius:10, margin:5}} >
                     <Text style={{fontSize:17, textAlign:"center", color:"#a6a1b7"}} >Cardiology</Text>
                 </Pressable>
 

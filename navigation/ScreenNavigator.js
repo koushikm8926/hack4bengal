@@ -10,6 +10,9 @@ import BloodOptions from '../screens/BloodOptions';
 import DonateBlood from '../screens/DonateBlood';
 import RequestBlood from '../screens/RequestBlood';
 import DoctorScreen from '../screens/DoctorScreen';
+import OrthoScreen from '../problems/OrthoScreen';
+import CardioScreen from '../problems/CardioScreen';
+
 
 
 const ScreenNavigator = () => {
@@ -27,6 +30,8 @@ const ScreenNavigator = () => {
         <Stack.Screen name='request' component={RequestBlood} options={{ headerShown: false }}  />
         <Stack.Screen name='blood' component={BloodOptions} options={{ headerShown: false }}  />
         <Stack.Screen name='Doctor' component={DoctorScreen} options={{headerShown:false}} />
+        <Stack.Screen name='ortho' component={OrthoScreen} options={{headerShown:false}} />
+        <Stack.Screen name='Cardio' component={CardioScreen} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   )
