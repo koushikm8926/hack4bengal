@@ -51,7 +51,7 @@ const DonateBlood = () => {
     
     ]
   return (
-    <SafeAreaView style={{marginTop:Platform.OS === "android" ? 20:0,}}>
+    <ScrollView style={{marginTop:Platform.OS === "android" ? 20:0,}}>
           <View>
            
            <View style={{justifyContent:'center', alignItems:'center', marginTop:20,}}>
@@ -87,7 +87,7 @@ const DonateBlood = () => {
 
 
           </View>    
-     </SafeAreaView>
+     </ScrollView>
   )
 }
 
