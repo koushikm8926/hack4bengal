@@ -12,6 +12,8 @@ import RequestBlood from '../screens/RequestBlood';
 import DoctorScreen from '../screens/DoctorScreen';
 import OrthoScreen from '../problems/OrthoScreen';
 import CardioScreen from '../problems/CardioScreen';
+import GastroScreen from '../problems/GastroScreen';
+import DentalScreen from '../problems/DentalScreen';
 
 
 
@@ -32,6 +34,8 @@ const ScreenNavigator = () => {
         <Stack.Screen name='Doctor' component={DoctorScreen} options={{headerShown:false}} />
         <Stack.Screen name='ortho' component={OrthoScreen} options={{headerShown:false}} />
         <Stack.Screen name='Cardio' component={CardioScreen} options={{headerShown:false}} />
+        <Stack.Screen name='Gastro' component={GastroScreen} options={{headerShown:false}} />
+        <Stack.Screen name='Dental' component={DentalScreen} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   )
