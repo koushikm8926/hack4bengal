@@ -126,11 +126,11 @@ export default function Emergency({navigation}){
         <View style={{flexDirection:'row', marginLeft:10, marginTop:12,}}> 
             <Image source={{uri:'https://lh3.googleusercontent.com/ogw/AGvuzYY_1sO33NElreaVQQR7Pevwz71gfRD7-aLwsrTYew=s64-c-mo'}} style={styles.avtar}></Image>  
            
-           <View>
-           <Text style={{fontWeight:'500',  }} >Hello User!</Text>  
+           <View style={{marginLeft:15,}}>
+           <Text style={{fontWeight:'500',fontSize:19,marginLeft:12,  }} >Hello User!</Text>  
             <View style={{flexDirection:'row', marginTop:10,}}>
                     <Ionicons name="location" size={20} color="red"  style={{padding:5, }}></Ionicons> 
-                    <Text style={{fontWeight:'bold', fontSize:15, color:'red' }} >{displayCurrentAddress}</Text>               
+                    <Text style={{fontWeight:'bold', fontSize:17, color:'red' }} >{displayCurrentAddress}</Text>               
             </View>
 
             </View> 
@@ -226,7 +226,7 @@ avtar:{
 }, 
  
 view2:{ 
-    marginTop:50, 
+    marginTop:20, 
     alignItems:'center', 
 }, 
  
