@@ -40,6 +40,15 @@ const HomeScreen = () => {
         experience:"6 years",
         fees:"170$",
         },
+        {
+            id:"1",
+            name:"Dr. Gagandeep",
+            image:"https://th.bing.com/th/id/OIP.0F2VgQsf-1S410g0ZYQB-gHaKX?pid=ImgDet&w=1000&h=1400&rs=1",
+            rating:"4.5",
+            designation:"Gynaecogolist",
+            experience:"4 years",
+            fees:"400$",
+            },
         
           
         ]
@@ -50,9 +59,9 @@ const HomeScreen = () => {
    
     <ScrollView>
 
-        <View style={{marginTop:50, marginLeft:20, }}>
-        <Text style={{fontSize:25, fontWeight:500 }} >Find your</Text>
-        <Text style={{fontSize:25, fontWeight:500 }} >Health Solutions!</Text>
+        <View style={{marginTop:20, marginLeft:20, }}>
+        <Text style={{fontSize:25, fontWeight:500, color:'#e2414c' }} >Find your</Text>
+        <Text style={{fontSize:25, fontWeight:500 , color:'#e2414c'}} >Health Solutions!</Text>
         </View>
 
         <View style={{ flexDirection:"row", margin:14 }} >
@@ -79,7 +88,8 @@ const HomeScreen = () => {
         </View>
 
         <View style={{marginLeft:20}} >
-            <Text style={{fontSize:23, }} >Common Health Problem</Text>
+            <Text style={{fontSize:23, color:'#e2414c', fontWeight:'600'}} >Common Health Problem</Text>
+            <View style={{borderColor:'#e2414c',borderWidth:1,width:350,marginTop:5,}}/>
             <View style={{flexDirection:"row", flexWrap:"wrap", marginTop:15 }} >
                 <Pressable onPress={()=>navigation.navigate("ortho")} style={{height:40, width:120, backgroundColor:"#ece7f6",  padding:6, borderRadius:10, margin:5}} >
                     <Text style={{fontSize:17, textAlign:"center", color:"black", }} >Orthopaedics</Text>
@@ -122,28 +132,31 @@ const HomeScreen = () => {
         <Text>Sort By Fees</Text>
       </Pressable>
 </View>
-
-
-
-
         </View>
 
 
-<Text style={{padding:10,fontSize:20,fontWeight:'bold'}}>Wellknown Doctors</Text>
+<Text style={{padding:10,fontSize:20, color:'#e2414c', fontWeight:'bold', marginLeft:10,}}>Wellknown Doctors</Text>
+<View style={{borderColor:'#e2414c',borderWidth:1,width:350,marginLeft:20,}}/>
+
+
 
 <View style={{marginTop:10,}}>
 {data.map((item, index)=>(
-    <View key={index} style={{marginLeft:10,flexDirection:'row',margin:10,}} >
-        <Image style={{height:80, width:80,borderRadius:7,}} source={{uri:item.image}} />
+    <View key={index} style={{marginLeft:10,height:120,flexDirection:'row',margin:10,borderBottomColor:'#e2414c', borderBottomWidth:4,borderRadius:7,borderRightColor:"#e2414c", borderRightWidth:2,borderLeftColor:'#e2414c', borderLeftWidth:2,borderRadius:10,}} >
+        <Image style={{height:80, width:80,borderRadius:7,marginLeft:10,marginTop:10,}} source={{uri:item.image}} />
         
         <View style={{marginLeft:10,flexDirection:'column'}}>
-            <View style={{flexDirection:'row'}}> 
-                 <Text style={{fontSize:19,fontWeight:'500'}}>{item.name}</Text>
-                 <Text style={{fontSize:19, fontWeight:'300', marginLeft:20,}}>{item.rating}</Text>
-                 <AntDesign name="star" size={17} color="orange" style={{marginLeft:5,}} />
+            <View style={{flexDirection:'row',}}> 
+                 <Text style={{fontSize:20,fontWeight:'500'}}>{item.name}</Text>
+
+                 <View style={{flexDirection:'row',}}>
+                        <Text style={{fontSize:20, fontWeight:'300', marginLeft:20,}}>{item.rating}</Text>
+                        <AntDesign name="star" size={17} color="orange" style={{marginLeft:5,marginTop:5,}} />
+                 </View>   
+            
             </View>
-            <Text style={{fontSize:15,}}>{item.designation}</Text>
-            <Text style={{fontSize:15,}}>Experience {item.experience} </Text>
+            <Text style={{fontSize:16,}}>{item.designation}</Text>
+            <Text style={{fontSize:16,}}>Experience {item.experience} </Text>
             <Text>Fees {item.fees}</Text>
         </View>
 

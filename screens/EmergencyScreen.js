@@ -122,7 +122,7 @@ export default function Emergency({navigation}){
 
     return( 
         
-<View style={{marginTop:Platform.OS === "android" ? 50: 0 ,}} > 
+<View style={{marginTop:Platform.OS === "android" ? 20: 0 ,}} > 
     <View> 
         <View style={{flexDirection:'row', marginLeft:10, marginTop:12,}}> 
             <Image source={{uri:'https://lh3.googleusercontent.com/ogw/AGvuzYY_1sO33NElreaVQQR7Pevwz71gfRD7-aLwsrTYew=s64-c-mo'}} style={styles.avtar}></Image>  
